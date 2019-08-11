@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { BankOne, BankTwo } from './Components';
+import { BankOne, BankTwo, PadBank } from './Components';
 
 class App extends Component {
   constructor(props) {
