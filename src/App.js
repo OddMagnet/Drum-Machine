@@ -8,19 +8,19 @@ class App extends Component {
     super(props);
 
     this.state = {
-      power: true,              // Drum Machine active?
-      display: '',              // text that will be displayed
-      currentPadBank: BankOne,  // soundbank currently in use
-      currentPadBankId: 'Heater Kit', // name of the soundbank
-      sliderVolume: 0.3               // current volume
+      power: true,                      // Drum Machine active?
+      display: String.fromCharCode(160),// text that will be displayed, initial non-breaking whitespace
+      currentPadBank: BankOne,          // soundbank currently in use
+      currentPadBankId: 'Heater Kit',   // name of the soundbank
+      sliderVolume: 0.3                 // current volume
     }
   }
 
   // function to toggle power
   powerControl = () => {
     this.setState({
-      power: !this.state.power, // toggle power
-      display: ''               // reset display to empty string
+      power: !this.state.power,         // toggle power
+      display: String.fromCharCode(160) // reset display to non-breaking whitespace
     });
   }
 
@@ -68,7 +68,7 @@ class App extends Component {
   // function to clear display
   clearDisplay = () => {
     this.setState({
-      display: ''
+      display: String.fromCharCode(160)
     });
   }
 
@@ -88,16 +88,54 @@ class App extends Component {
       : {
         float: 'right'
       }
-    
+
     // get all elements with class 'clip'
     const clips = [].slice.call(document.getElementsByClassName('clip'));
     // Then set the sound-value for each
     clips.forEach(sound => {
       sound.volume = this.state.sliderVolume
     });
-    
+
     return (
-      <h1>Drum Machine</h1>
+      <div className='inner-container' id='drum-machine'>
+
+        {/* PadBank */}
+
+        <div className='logo'>
+          <div className='inner-logo'>{'FCC' + String.fromCharCode(160)}</div>
+          <i className='inner-logo fa fa-free-code-camp' />
+        </div>
+
+        <div className='controls-container'>
+          {/* Power Control */}
+          <div className='control'>
+            <p>Power</p>
+            <div className='select' onClick={this.powerControl}>
+              <div className='inner' style={powerSwitch} />
+            </div>
+          </div>
+          {/* Display for Volume, Sound-Names, etc */}
+          <p id='display'>{this.state.display}</p>
+          {/* Volume Slider */}
+          <div className='volume-slider'>
+            <input
+              max='1'
+              min='0'
+              onChange={this.adjustVolume}
+              step='0.01'
+              type='range'
+              value={this.state.sliderVolume}
+            />
+          </div>
+          {/* Bank Control */}
+          <div className='control'>
+            <p>Bank</p>
+            <div className='select' onClick={this.selectBank}>
+              <div className='inner' style={bankSwitch} />
+            </div>
+          </div>
+        </div>
+      </div>
     );
   }
 }
