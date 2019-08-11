@@ -73,6 +73,21 @@ class App extends Component {
   }
 
   render() {
+    // variables that hold power- and bank-switch style/positions
+    const powerSwitch = this.state.power
+      ? {
+        float: 'right'
+      }
+      : {
+        float: 'left'
+      }
+    const bankSwitch = this.state.currentPadBank === BankOne
+      ? {
+        float: 'left'
+      }
+      : {
+        float: 'right'
+      }
     return (
       <h1>Drum Machine</h1>
     );
