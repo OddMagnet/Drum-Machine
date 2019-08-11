@@ -99,7 +99,14 @@ class App extends Component {
       <div className='inner-container' id='drum-machine'>
 
         {/* PadBank Component*/}
+        <PadBank
+          clipVolume={this.state.sliderVolume}
+          currentPadBank={this.state.currentPadBank}
+          power={this.state.power}
+          updateDisplay={this.updateDisplay}
+        />
 
+        {/* Logo */}
         <div className='logo'>
           <div className='inner-logo'>{'FCC' + String.fromCharCode(160)}</div>
           <i className='inner-logo fa fa-free-code-camp' />
