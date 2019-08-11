@@ -103,7 +103,7 @@ class App extends Component {
           clipVolume={this.state.sliderVolume}
           currentPadBank={this.state.currentPadBank}
           power={this.state.power}
-          updateDisplay={this.updateDisplay}
+          updateDisplay={this.displayClipName}
         />
 
         {/* Logo */}
