@@ -88,6 +88,14 @@ class App extends Component {
       : {
         float: 'right'
       }
+    
+    // get all elements with class 'clip'
+    const clips = [].slice.call(document.getElementsByClassName('clip'));
+    // Then set the sound-value for each
+    clips.forEach(sound => {
+      sound.volume = this.state.sliderVolume
+    });
+    
     return (
       <h1>Drum Machine</h1>
     );
