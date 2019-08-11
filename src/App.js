@@ -99,7 +99,7 @@ class App extends Component {
     return (
       <div className='inner-container' id='drum-machine'>
 
-        {/* PadBank */}
+        {/* PadBank Component*/}
 
         <div className='logo'>
           <div className='inner-logo'>{'FCC' + String.fromCharCode(160)}</div>
