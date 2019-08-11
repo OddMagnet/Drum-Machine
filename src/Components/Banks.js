@@ -101,7 +101,7 @@ const BankTwo = [
     },
     {
         keyCode: 88,
-        keyTrigger: 'x',
+        keyTrigger: 'X',
         id: 'Side-Stick',
         url: 'https://s3.amazonaws.com/freecodecamp/drums/side_stick_1.mp3'
     },
