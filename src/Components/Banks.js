@@ -37,8 +37,8 @@ const BankOne = [
         url: 'https://s3.amazonaws.com/freecodecamp/drums/Dsc_Oh.mp3'
     },
     {
-        keyCode: 90,
-        keyTrigger: 'Z',
+        keyCode: 89,
+        keyTrigger: 'Y',
         id: "Kick-n'-Hat",
         url: 'https://s3.amazonaws.com/freecodecamp/drums/Kick_n_Hat.mp3'
     },
@@ -94,14 +94,14 @@ const BankTwo = [
         url: 'https://s3.amazonaws.com/freecodecamp/drums/Bld_H1.mp3'
     },
     {
-        keyCode: 90,
-        keyTrigger: 'Z',
+        keyCode: 89,
+        keyTrigger: 'Y',
         id: 'Punchy-Kick',
         url: 'https://s3.amazonaws.com/freecodecamp/drums/punchy_kick_1.mp3'
     },
     {
         keyCode: 88,
-        keyTrigger: 'X',
+        keyTrigger: 'x',
         id: 'Side-Stick',
         url: 'https://s3.amazonaws.com/freecodecamp/drums/side_stick_1.mp3'
     },
