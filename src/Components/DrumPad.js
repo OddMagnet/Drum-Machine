@@ -4,8 +4,8 @@ import React, { Component } from 'react';
 // Active when clicked / key pressed
 // more top-margin and no y value for boxShadow => pressed down effect
 const activeStyle = {
-    backgroundColor: 'light-blue',
-    boxShadow: '0 3px light-blue',
+    backgroundColor: 'lightskyblue',
+    boxShadow: '0 3px lightskyblue',
     height: 77,
     marginTop: 13
 };
@@ -47,7 +47,7 @@ class DrumPad extends Component {
         // check if dum machine is on
         if (this.props.power) {
             // check if it's already active
-            if (this.state.padStyle.backgroundColor === 'orange') {
+            if (this.state.padStyle.backgroundColor === 'lightskyblue') {
                 // then set to inactive
                 this.setState({
                     padStyle: inactiveStyle
@@ -59,18 +59,18 @@ class DrumPad extends Component {
                 });
             }
         } else if (this.state.padStyle.marginTop === 13) {
-            // if power is off and button is pressed, set it to inactive
             this.setState({
+                // if power is off and button is pressed, set it to inactive
                 padStyle: inactiveStyle
             });
         } else {
-            // power off and button not pressed, set it to active without the BG Color
             this.setState({
+                // power off and button not pressed, set it to active without the BG Color
                 padStyle: {
                     height: 77,
                     marginTop: 13,
                     backgroundColor: 'grey',
-                    boxShadow: '0 3px grey',
+                    boxShadow: '0 3px grey'
                 }
             });
         }
