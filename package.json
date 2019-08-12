@@ -1,5 +1,6 @@
 {
   "name": "drum-machine",
+  "homepage": "https://oddmagnet.github.io/Drum-Machine/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
