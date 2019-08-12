@@ -32,6 +32,7 @@ class PadBank extends Component {
           <DrumPad
             clip='#'
             clipId={padBankArr[i].id}
+            key={i}
             keyCode={padBankArr[i].keyCode}
             keyTrigger={padBankArr[i].keyTrigger}
             power={this.props.power}
