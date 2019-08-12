@@ -4,7 +4,7 @@ A React Web App, based on this Challenge from FreeCodeCamp:
 [Build a Drum Machine](https://learn.freecodecamp.org/front-end-libraries/front-end-libraries-projects/build-a-drum-machine)
 
 ## See it online
-[Click here](https://oddmagnet.github.io/Drum-Machine/) to see the Markdown Previewer in action
+[Click here](https://oddmagnet.github.io/Drum-Machine/) to see the Drum Machine in action
 
 ## Resources used
 [Create React App](https://github.com/facebook/create-react-app) to quickly bootstrap the app  
